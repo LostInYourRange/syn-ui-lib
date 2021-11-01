@@ -59,7 +59,7 @@ local ModMenuDefaultSettings = {
 	['Keybind'] = Enum.KeyCode.RightShift
 } -- Settings for UIs without [param [Settings]]
 
-ModMenu.CreateMenu = function(LibraryName, Settings)
+ModMenu.CreateMenu = function(LibraryName, revisionName, Settings)
 	local function Warn(Message) -- Library warning system
 		return rconsolewarn("[Synapse UI Library]: "..Message)
 	end
@@ -484,7 +484,7 @@ ModMenu.CreateMenu = function(LibraryName, Settings)
     JBTextLabel.Position = UDim2.new(0, 10, 0, 0)
     JBTextLabel.Size = UDim2.new(0, 210, 0, 60)
     JBTextLabel.Font = Enum.Font.SourceSansLight
-    JBTextLabel.Text = "hexaware"
+    JBTextLabel.Text = LibraryName
     JBTextLabel.TextSize = 48
     JBTextLabel.TextXAlignment = Enum.TextXAlignment.Left
     table.insert(RTextLabels, JBTextLabel)
@@ -497,7 +497,7 @@ ModMenu.CreateMenu = function(LibraryName, Settings)
     JBTextLabel_2.Position = UDim2.new(0, 220, 0, 10)
     JBTextLabel_2.Size = UDim2.new(0, 50, 0, 50)
     JBTextLabel_2.Font = Enum.Font.SourceSansLight
-    JBTextLabel_2.Text = "v0.1 rewritten"
+    JBTextLabel_2.Text = revisionName;
     JBTextLabel_2.TextColor3 = Color3.new(0.501961, 0.501961, 0.501961)
     JBTextLabel_2.TextSize = 24
     JBTextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
